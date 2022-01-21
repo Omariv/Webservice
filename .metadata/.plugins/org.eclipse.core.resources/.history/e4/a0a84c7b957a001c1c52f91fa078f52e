@@ -1,0 +1,5 @@
+package com.WS_Part;
+
+public abstract class Utils {
+
+}

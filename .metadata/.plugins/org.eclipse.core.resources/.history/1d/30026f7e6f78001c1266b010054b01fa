@@ -1,0 +1,5 @@
+package com.WS_Route;
+
+public abstract class Utils {
+
+}

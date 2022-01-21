@@ -1,0 +1,7 @@
+{
+	"name": "",
+	"description": "Test description",
+	"attribute[Route Base Purpose]": "Standard",
+	"attribute[Route Completion Action]": "Notify Route Owner",
+	"attribute[Auto Stop On Rejection]": "Immediate"
+}

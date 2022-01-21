@@ -1,0 +1,60 @@
+@options
+@packages
+@argfile
+-classpath
+'C:/Users/stephane.pittet/.m2/repository/com/alstom/WebServiceToolbox/1.0.1/WebServiceToolbox-1.0.1.jar;C:/Users/stephane.pittet/.m2/repository/org/json/json/20190722/json-20190722.jar;C:/Users/stephane.pittet/.m2/repository/org/apache/logging/log4j/log4j-api/2.15.0/log4j-api-2.15.0.jar;C:/Users/stephane.pittet/.m2/repository/org/apache/logging/log4j/log4j-core/2.15.0/log4j-core-2.15.0.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'E:/DEV/WORKSPACE/ECLIPSE/PLM4ADocToolKit/src/main/java;E:/DEV/WORKSPACE/ECLIPSE/PLM4ADocToolKit/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2021. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'E:/DEV/WORKSPACE/ECLIPSE/PLM4ADocToolKit/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'PLM4A_Doc_ToolKit 1.0.1 API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/11/docs/api' 'E:/DEV/WORKSPACE/ECLIPSE/PLM4ADocToolKit/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'PLM4A_Doc_ToolKit 1.0.1 API'
+com.alstom.PLM4ADocToolKit
+com.alstom.PLM4ADocToolKit.sample
+'E:/DEV/WORKSPACE/ECLIPSE/PLM4ADocToolKit/src/main/java/com/alstom/PLM4ADocToolKit/DocumentManager.java'
+'E:/DEV/WORKSPACE/ECLIPSE/PLM4ADocToolKit/src/main/java/com/alstom/PLM4ADocToolKit/package-info.java'
+'E:/DEV/WORKSPACE/ECLIPSE/PLM4ADocToolKit/src/main/java/com/alstom/PLM4ADocToolKit/sample/CreateDoc.java'
+'E:/DEV/WORKSPACE/ECLIPSE/PLM4ADocToolKit/src/main/java/com/alstom/PLM4ADocToolKit/sample/DownloadFile.java'
+'E:/DEV/WORKSPACE/ECLIPSE/PLM4ADocToolKit/src/main/java/com/alstom/PLM4ADocToolKit/sample/package-info.java'
+C:\Users\stephane.pittet\.m2\repository\com\alstom\WebServiceToolbox\1.0.1\WebServiceToolbox-1.0.1.jar = 1639390376206
+C:\Users\stephane.pittet\.m2\repository\org\json\json\20190722\json-20190722.jar = 1633521621041
+C:\Users\stephane.pittet\.m2\repository\org\apache\logging\log4j\log4j-api\2.15.0\log4j-api-2.15.0.jar = 1639388419447
+C:\Users\stephane.pittet\.m2\repository\org\apache\logging\log4j\log4j-core\2.15.0\log4j-core-2.15.0.jar = 1639388413726
+E:\DEV\WORKSPACE\ECLIPSE\PLM4ADocToolKit\src\main\java = 1634205881401
+E:\DEV\WORKSPACE\ECLIPSE\PLM4ADocToolKit\target\generated-sources\annotations = 1639390414416
+E:\DEV\WORKSPACE\ECLIPSE\PLM4ADocToolKit\target\apidocs\allclasses-index.html = 1639390424157
+E:\DEV\WORKSPACE\ECLIPSE\PLM4ADocToolKit\target\apidocs\allclasses.html = 1639390424188
+E:\DEV\WORKSPACE\ECLIPSE\PLM4ADocToolKit\target\apidocs\allpackages-index.html = 1639390424163
+E:\DEV\WORKSPACE\ECLIPSE\PLM4ADocToolKit\target\apidocs\constant-values.html = 1639390424070
+E:\DEV\WORKSPACE\ECLIPSE\PLM4ADocToolKit\target\apidocs\deprecated-list.html = 1639390424177
+E:\DEV\WORKSPACE\ECLIPSE\PLM4ADocToolKit\target\apidocs\element-list = 1639390424023
+E:\DEV\WORKSPACE\ECLIPSE\PLM4ADocToolKit\target\apidocs\help-doc.html = 1639390424205
+E:\DEV\WORKSPACE\ECLIPSE\PLM4ADocToolKit\target\apidocs\index-all.html = 1639390424146
+E:\DEV\WORKSPACE\ECLIPSE\PLM4ADocToolKit\target\apidocs\index.html = 1639390424195
+E:\DEV\WORKSPACE\ECLIPSE\PLM4ADocToolKit\target\apidocs\member-search-index.js = 1639390424141
+E:\DEV\WORKSPACE\ECLIPSE\PLM4ADocToolKit\target\apidocs\member-search-index.zip = 1639390424144
+E:\DEV\WORKSPACE\ECLIPSE\PLM4ADocToolKit\target\apidocs\overview-summary.html = 1639390424198
+E:\DEV\WORKSPACE\ECLIPSE\PLM4ADocToolKit\target\apidocs\overview-tree.html = 1639390424120
+E:\DEV\WORKSPACE\ECLIPSE\PLM4ADocToolKit\target\apidocs\package-search-index.js = 1639390424134
+E:\DEV\WORKSPACE\ECLIPSE\PLM4ADocToolKit\target\apidocs\package-search-index.zip = 1639390424137
+E:\DEV\WORKSPACE\ECLIPSE\PLM4ADocToolKit\target\apidocs\script.js = 1639390424217
+E:\DEV\WORKSPACE\ECLIPSE\PLM4ADocToolKit\target\apidocs\search.js = 1639390424221
+E:\DEV\WORKSPACE\ECLIPSE\PLM4ADocToolKit\target\apidocs\stylesheet.css = 1639390424214
+E:\DEV\WORKSPACE\ECLIPSE\PLM4ADocToolKit\target\apidocs\type-search-index.js = 1639390424138
+E:\DEV\WORKSPACE\ECLIPSE\PLM4ADocToolKit\target\apidocs\type-search-index.zip = 1639390424140

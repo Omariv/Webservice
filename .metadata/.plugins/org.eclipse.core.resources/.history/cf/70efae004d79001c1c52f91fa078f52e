@@ -1,0 +1,68 @@
+import java.io.FileReader;
+import java.net.URL;
+import java.nio.file.Paths;
+
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+
+import com.WebServiceToolBox.Connection;
+import com.WebServiceToolBox.Utils.Response;
+
+public class ChangeActionManager {
+
+	static final Logger logger = LogManager.getLogger(ChangeActionManager.class);
+	Connection con;
+	String inputFile;
+
+	public ChangeActionManager(String user, String securityContext, String inputFile) throws Exception {
+		try {
+			this.con = new Connection(user, securityContext);
+			this.inputFile = inputFile;
+		} catch (Exception e) {
+			logger.catching(e);
+			throw e;
+		}
+	}
+
+//	{
+//		  "policy": "Change Action",
+//		  "description": "Description of Change Action",
+//		  "title": "Title of Change Action",
+//		  "name": "name of Change Action",
+//		  "severity": "Low",
+//		  "Estimated Start Date": "2017-07-21",
+//		  "Estimated Completion Date": "2017-07-22",
+//		  "xmlApplicability": ""
+//	}
+
+	public Response CreateChangeAction() throws Exception {		
+		JSONParser jsonParser = new JSONParser();
+		JSONObject obj = new JSONObject();
+		try (FileReader reader = new FileReader(inputFile)) {	
+			obj = (JSONObject) jsonParser.parse(reader);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		StringBuffer sbNewDocumentURL = new StringBuffer();
+		sbNewDocumentURL.append(con.getUrl3dpaceEnv());
+		sbNewDocumentURL.append(Connection.SERVICE_3DSPACE);
+		sbNewDocumentURL.append(Utils.SPACE_CHANGEACTION);
+		
+		Response response = con.getResultFromWebService(
+				sbNewDocumentURL.toString(), 
+				"POST", 
+				obj.toString());
+		
+		logger.log(Level.DEBUG, response.toString());
+		System.out.println(response);
+		
+		//TODO check response OK/SUCCESS
+		// return ID
+		return response;
+	}
+
+}

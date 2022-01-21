@@ -1,0 +1,7 @@
+package com.WS_Route;
+
+public abstract class Utils {
+	
+	public static final String SPACE_CHANGEACTION = "/resources/v1/modeler/dsrt/routes";
+
+}

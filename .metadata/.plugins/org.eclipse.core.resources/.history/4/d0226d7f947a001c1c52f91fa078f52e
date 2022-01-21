@@ -1,0 +1,22 @@
+{
+	"items": [
+		{
+			"attributes": {
+				"title": "My name",
+				"description": "My description",
+				"dseng:EnterpriseReference": {
+					"partNumber": "1234.."
+				},
+				"dseno:EnterpriseAttributes": {
+					"Attribute DB Name": "Attribute DB Value"
+				},
+				"dscfg:Configured": {
+					"enabledCriteria": [
+						"ModelVersion",
+						"Variant"
+					]
+				}
+			}
+		}
+	]
+}

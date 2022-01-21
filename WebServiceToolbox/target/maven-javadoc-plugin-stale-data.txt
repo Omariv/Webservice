@@ -1,0 +1,57 @@
+@options
+@packages
+@argfile
+-classpath
+'C:/Users/stephane.pittet/.m2/repository/org/json/json/20190722/json-20190722.jar;C:/Users/stephane.pittet/.m2/repository/org/apache/logging/log4j/log4j-api/2.15.0/log4j-api-2.15.0.jar;C:/Users/stephane.pittet/.m2/repository/org/apache/logging/log4j/log4j-core/2.15.0/log4j-core-2.15.0.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'E:/DEV/WORKSPACE/ECLIPSE/WebServiceToolbox/src/main/java;E:/DEV/WORKSPACE/ECLIPSE/WebServiceToolbox/target/generated-sources/annotations'
+--no-module-directories
+-author
+-bottom
+'Copyright &#169; 2021. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'E:/DEV/WORKSPACE/ECLIPSE/WebServiceToolbox/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'WebServiceToolbox 1.0.1 API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/11/docs/api' 'E:/DEV/WORKSPACE/ECLIPSE/WebServiceToolbox/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'WebServiceToolbox 1.0.1 API'
+com.alstom.WebServiceToolBox
+'E:/DEV/WORKSPACE/ECLIPSE/WebServiceToolbox/src/main/java/com/alstom/WebServiceToolBox/Connection.java'
+'E:/DEV/WORKSPACE/ECLIPSE/WebServiceToolbox/src/main/java/com/alstom/WebServiceToolBox/HTTPMultipartFormData.java'
+'E:/DEV/WORKSPACE/ECLIPSE/WebServiceToolbox/src/main/java/com/alstom/WebServiceToolBox/ITBWebService.java'
+'E:/DEV/WORKSPACE/ECLIPSE/WebServiceToolbox/src/main/java/com/alstom/WebServiceToolBox/package-info.java'
+C:\Users\stephane.pittet\.m2\repository\org\json\json\20190722\json-20190722.jar = 1633521621041
+C:\Users\stephane.pittet\.m2\repository\org\apache\logging\log4j\log4j-api\2.15.0\log4j-api-2.15.0.jar = 1639388419447
+C:\Users\stephane.pittet\.m2\repository\org\apache\logging\log4j\log4j-core\2.15.0\log4j-core-2.15.0.jar = 1639388413726
+E:\DEV\WORKSPACE\ECLIPSE\WebServiceToolbox\src\main\java = 1634139600554
+E:\DEV\WORKSPACE\ECLIPSE\WebServiceToolbox\target\generated-sources\annotations = 1639390374872
+E:\DEV\WORKSPACE\ECLIPSE\WebServiceToolbox\target\apidocs\allclasses-index.html = 1639390384998
+E:\DEV\WORKSPACE\ECLIPSE\WebServiceToolbox\target\apidocs\allclasses.html = 1639390385016
+E:\DEV\WORKSPACE\ECLIPSE\WebServiceToolbox\target\apidocs\allpackages-index.html = 1639390385004
+E:\DEV\WORKSPACE\ECLIPSE\WebServiceToolbox\target\apidocs\constant-values.html = 1639390384902
+E:\DEV\WORKSPACE\ECLIPSE\WebServiceToolbox\target\apidocs\deprecated-list.html = 1639390385013
+E:\DEV\WORKSPACE\ECLIPSE\WebServiceToolbox\target\apidocs\element-list = 1639390384858
+E:\DEV\WORKSPACE\ECLIPSE\WebServiceToolbox\target\apidocs\help-doc.html = 1639390385027
+E:\DEV\WORKSPACE\ECLIPSE\WebServiceToolbox\target\apidocs\index-all.html = 1639390384989
+E:\DEV\WORKSPACE\ECLIPSE\WebServiceToolbox\target\apidocs\index.html = 1639390385019
+E:\DEV\WORKSPACE\ECLIPSE\WebServiceToolbox\target\apidocs\member-search-index.js = 1639390384984
+E:\DEV\WORKSPACE\ECLIPSE\WebServiceToolbox\target\apidocs\member-search-index.zip = 1639390384986
+E:\DEV\WORKSPACE\ECLIPSE\WebServiceToolbox\target\apidocs\overview-tree.html = 1639390384944
+E:\DEV\WORKSPACE\ECLIPSE\WebServiceToolbox\target\apidocs\package-search-index.js = 1639390384974
+E:\DEV\WORKSPACE\ECLIPSE\WebServiceToolbox\target\apidocs\package-search-index.zip = 1639390384978
+E:\DEV\WORKSPACE\ECLIPSE\WebServiceToolbox\target\apidocs\script.js = 1639390385040
+E:\DEV\WORKSPACE\ECLIPSE\WebServiceToolbox\target\apidocs\search.js = 1639390385046
+E:\DEV\WORKSPACE\ECLIPSE\WebServiceToolbox\target\apidocs\stylesheet.css = 1639390385036
+E:\DEV\WORKSPACE\ECLIPSE\WebServiceToolbox\target\apidocs\type-search-index.js = 1639390384980
+E:\DEV\WORKSPACE\ECLIPSE\WebServiceToolbox\target\apidocs\type-search-index.zip = 1639390384982
