@@ -50,7 +50,7 @@ public class ChangeActionManager {
 		    				sbNewDocumentURL.toString(), 
 		    				"POST", 
 		    				obj.toString());
-		    		//System.out.println(response);		    		
+		    		System.out.println(response);		    		
 		        }
 		        logger.log(Level.DEBUG, response.toString());
 		        
@@ -60,5 +60,4 @@ public class ChangeActionManager {
 		 
 		return response;
 	}
-
 }

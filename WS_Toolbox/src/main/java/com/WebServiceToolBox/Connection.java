@@ -12,8 +12,6 @@ import java.net.CookieManager;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
-import java.util.List;
-import java.util.Map;
 import java.util.Properties;
 
 import org.apache.logging.log4j.Level;
@@ -140,6 +138,7 @@ public class Connection extends ITBWebService {
 		return ResponseNewCode;
 	}
 
+
 	/**
 	 * This method is used to obtain a CSRF ticket
 	 * 
@@ -214,7 +213,7 @@ public class Connection extends ITBWebService {
 		responseC.responseBody = response;
 		responseC.responseCode = iResponseCode;
 		
-		System.out.println(responseC);
+		//System.out.println(responseC);
 		return responseC;
 	}
 
