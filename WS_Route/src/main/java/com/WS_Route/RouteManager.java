@@ -13,11 +13,8 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-
 import com.WebServiceToolBox.Connection;
 import com.WebServiceToolBox.Utils.Response;
-
-
 
 public class RouteManager {
 	
@@ -34,8 +31,7 @@ public class RouteManager {
 			throw e;
 		}
 	}
-	
-	
+		
 	/*
 	 * CreateRoute method
 	 */
@@ -60,12 +56,10 @@ public class RouteManager {
 		    				obj.toString());
 		    		System.out.println(response);		    		
 		        }
-		        logger.log(Level.DEBUG, response.toString());
-		        
+		        logger.log(Level.DEBUG, response.toString());		        
 		 } catch (Exception e) {
 				e.printStackTrace();
-		}
-		 
+		}	 
 		return response;
 	}
 

@@ -1,7 +1,7 @@
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-
+import java.net.URLConnection;
 import java.text.ParseException;
 
 import org.apache.logging.log4j.Level;
@@ -11,20 +11,27 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-
 import com.WebServiceToolBox.Connection;
 import com.WebServiceToolBox.Utils.Response;
+import com.WebServiceToolBox.genLog;
 
 public class ChangeActionManager {
 
 	static final Logger logger = LogManager.getLogger(ChangeActionManager.class);
+	static final String type = "Change Action";
+	static final String step = "loading Change Action";
 	Connection con;
+	genLog genlog;
 	String inputFile;
+	String logFile;
+	String r;
+	int code;
 
-	public ChangeActionManager(String user, String securityContext, String inputFile) throws Exception {
+	public ChangeActionManager(String user, String securityContext, String inputFile, String logFile) throws Exception {
 		try {
 			this.con = new Connection(user, securityContext);
 			this.inputFile = inputFile;
+			this.logFile = logFile;
 		} catch (Exception e) {
 			logger.catching(e);
 			throw e;
@@ -41,6 +48,8 @@ public class ChangeActionManager {
 		
 		JSONParser parser = new JSONParser();
 		JSONArray jsonArray = new JSONArray();
+		JSONObject myResponse = new JSONObject();
+		StringBuffer sbBuffer = new StringBuffer();
 		 try {
 			jsonArray =  (JSONArray) parser.parse(new FileReader(inputFile));
 		        for (Object o : jsonArray)
@@ -50,7 +59,15 @@ public class ChangeActionManager {
 		    				sbNewDocumentURL.toString(), 
 		    				"POST", 
 		    				obj.toString());
-		    		System.out.println(response);		    		
+	
+							this.genlog = new genLog("VMs", step, response.Status, type, response.Name, "String revision", response.responseCode, "String errorDetail",logFile);
+							//this.r = con.getResponseBody();
+		    				//JSONObject myResponse = new JSONObject(con.getResponseBody(null));
+							//sbBuffer.append(Connection.getResponseBody(sbNewDocumentURL));
+							
+		    		
+							System.out.println(response);
+		    		
 		        }
 		        logger.log(Level.DEBUG, response.toString());
 		        

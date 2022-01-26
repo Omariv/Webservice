@@ -20,7 +20,7 @@ public class CreateChangeAction {
 	public static void main(String[] args) {
 		try {		
 			//ChangeActionManager cam = new ChangeActionManager("user00", "ctx::VPLMProjectLeader.Company Name.Common Space");
-			ChangeActionManager cam = new ChangeActionManager(Utils.USER, Utils.CONTEXT, Utils.inputfile);
+			ChangeActionManager cam = new ChangeActionManager(Utils.USER, Utils.CONTEXT, Utils.inputfile, Utils.logFile);
 			cam.CreateChangeAction();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.text.ParseException;
 
+
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -41,10 +42,12 @@ public class EngItemManager {
 		sbNewDocumentURL.append(Utils.SPACE_ENGITEM);
 		Response response = null;
 		
+		
 		JSONParser parser = new JSONParser();
 		JSONArray jsonArray = new JSONArray();
 		 try {
 			jsonArray =  (JSONArray) parser.parse(new FileReader(inputFile));
+			
 		        for (Object o : jsonArray)
 		        {
 		            JSONObject obj = (JSONObject) o;		            
@@ -52,14 +55,12 @@ public class EngItemManager {
 		    				sbNewDocumentURL.toString(), 
 		    				"POST", 
 		    				obj.toString());
-		    		System.out.println(response);		    		
+		    		System.out.println(response);		    	  
 		        }
-		        logger.log(Level.DEBUG, response.toString());
-		        
+		        logger.log(Level.DEBUG, response.toString());		        
 		 } catch (Exception e) {
 				e.printStackTrace();
-		}
-		 
+		}	 
 		return response;
 	}
 

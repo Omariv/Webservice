@@ -189,8 +189,7 @@ public class Connection extends ITBWebService {
 		if (csrfTicket != null && !"".equals(csrfTicket)) {
 			connectionWebURL.setRequestProperty("ENO_CSRF_TOKEN", csrfTicket);
 		}
-		//Map<String, List<String>> aa = connectionWebURL.getRequestProperties();
-		//Map<String, List<String>> ab = connectionWebURL.getHeaderFields();
+
 		connectionWebURL.setRequestMethod(method);
 		connectionWebURL.setUseCaches(false);
 
@@ -204,15 +203,25 @@ public class Connection extends ITBWebService {
 			
 
 		
-		sbBuffer.append(getResponseBody(connectionWebURL));
-		
+		sbBuffer.append(getResponseBody(connectionWebURL));		
 		String response = sbBuffer.toString();
 		int iResponseCode = connectionWebURL.getResponseCode();
 		
 		Response responseC = new Utils().new Response();
 		responseC.responseBody = response;
 		responseC.responseCode = iResponseCode;
-		
+		/*
+		// begin test
+		JSONObject myResponse = new JSONObject(sbBuffer.toString());
+		responseC.Id = myResponse.getString("id");
+		responseC.Name = myResponse.getString("name");
+		if (iResponseCode == HttpURLConnection.HTTP_OK) {
+			responseC.Status = "Import OK";	
+		}else {
+			responseC.Status = "Import KO";	
+		}		
+		// end test
+		*/
 		//System.out.println(responseC);
 		return responseC;
 	}
