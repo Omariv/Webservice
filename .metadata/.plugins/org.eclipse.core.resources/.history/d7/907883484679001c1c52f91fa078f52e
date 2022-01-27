@@ -1,7 +1,0 @@
-
-public class Utils {
-
-
-	public static final String SPACE_CHANGEACTION = "/resources/v1/modeler/dslc/changeaction";
-
-}

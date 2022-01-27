@@ -72,11 +72,15 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="WS_Part"/>
+			<item value="WS_EngItem"/>
 			<item value="WS_Route"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="WS_Part"/>
+			<item value="WS_EngItem"/>
 			<item value="WS_Route"/>
 		</list>
 		<list key="projectNameTemplate">

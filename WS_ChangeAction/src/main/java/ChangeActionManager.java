@@ -1,7 +1,7 @@
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.net.URLConnection;
+import java.net.InetAddress;
 import java.text.ParseException;
 
 import org.apache.logging.log4j.Level;
@@ -12,6 +12,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 import com.WebServiceToolBox.Connection;
+import com.WebServiceToolBox.Utils;
 import com.WebServiceToolBox.Utils.Response;
 import com.WebServiceToolBox.genLog;
 
@@ -20,12 +21,14 @@ public class ChangeActionManager {
 	static final Logger logger = LogManager.getLogger(ChangeActionManager.class);
 	static final String type = "Change Action";
 	static final String step = "loading Change Action";
+
 	Connection con;
+	Utils u;
 	genLog genlog;
 	String inputFile;
 	String logFile;
 	String r;
-	int code;
+	
 
 	public ChangeActionManager(String user, String securityContext, String inputFile, String logFile) throws Exception {
 		try {
@@ -43,15 +46,20 @@ public class ChangeActionManager {
 		StringBuffer sbNewDocumentURL = new StringBuffer();
 		sbNewDocumentURL.append(con.getUrl3dpaceEnv());
 		sbNewDocumentURL.append(Connection.SERVICE_3DSPACE);
-		sbNewDocumentURL.append(Utils.SPACE_CHANGEACTION);
+		sbNewDocumentURL.append(Util.SPACE_CHANGEACTION);
 		Response response = null;
 		
 		JSONParser parser = new JSONParser();
 		JSONArray jsonArray = new JSONArray();
-		JSONObject myResponse = new JSONObject();
-		StringBuffer sbBuffer = new StringBuffer();
+		StringBuffer Body = new StringBuffer();
+		org.json.JSONObject myRes = null;
+		int code;
+		String HostName = InetAddress.getLocalHost().getHostName();
+		
+		
 		 try {
 			jsonArray =  (JSONArray) parser.parse(new FileReader(inputFile));
+			
 		        for (Object o : jsonArray)
 		        {
 		            JSONObject obj = (JSONObject) o;		            
@@ -60,14 +68,15 @@ public class ChangeActionManager {
 		    				"POST", 
 		    				obj.toString());
 	
-							this.genlog = new genLog("VMs", step, response.Status, type, response.Name, "String revision", response.responseCode, "String errorDetail",logFile);
-							//this.r = con.getResponseBody();
-		    				//JSONObject myResponse = new JSONObject(con.getResponseBody(null));
-							//sbBuffer.append(Connection.getResponseBody(sbNewDocumentURL));
-							
-		    		
+		    				 Body = con.Body;
+		    				 code = con.code;
+		    				 myRes = new org.json.JSONObject(Body.toString());
+		    				 if (code == 200) {		    					 
+		    					 genlog = new genLog(HostName, step, "Import OK", type, myRes.getString("name"), "-", code, "Sucess",myRes.getString("id"),logFile);
+		    				 }else {
+		    					 genlog = new genLog(HostName, step, "Import KO", type, "-", "-", code, myRes.getString("errorMessage"),"-",logFile);
+		    				 }
 							System.out.println(response);
-		    		
 		        }
 		        logger.log(Level.DEBUG, response.toString());
 		        

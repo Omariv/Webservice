@@ -19,6 +19,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.json.JSONObject;
 
+
+
 import com.WebServiceToolBox.Utils.Response;
 
 /**
@@ -42,6 +44,11 @@ public class Connection extends ITBWebService {
 	private String csrfTicket;
 
 	private boolean open = false;
+	
+	public StringBuffer Body;
+	public int code;
+	public JSONObject myBody = null;
+	
 
 	/**
 	 * Class constructor.
@@ -201,28 +208,18 @@ public class Connection extends ITBWebService {
 			wr.close();
 		}
 			
-
 		
 		sbBuffer.append(getResponseBody(connectionWebURL));		
 		String response = sbBuffer.toString();
 		int iResponseCode = connectionWebURL.getResponseCode();
-		
 		Response responseC = new Utils().new Response();
+			
 		responseC.responseBody = response;
 		responseC.responseCode = iResponseCode;
-		/*
-		// begin test
-		JSONObject myResponse = new JSONObject(sbBuffer.toString());
-		responseC.Id = myResponse.getString("id");
-		responseC.Name = myResponse.getString("name");
-		if (iResponseCode == HttpURLConnection.HTTP_OK) {
-			responseC.Status = "Import OK";	
-		}else {
-			responseC.Status = "Import KO";	
-		}		
-		// end test
-		*/
-		//System.out.println(responseC);
+		this.Body = sbBuffer;
+	    this.code = iResponseCode;
+		
+		this.myBody = new JSONObject(sbBuffer.toString());
 		return responseC;
 	}
 

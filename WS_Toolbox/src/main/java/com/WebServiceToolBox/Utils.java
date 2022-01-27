@@ -1,5 +1,7 @@
 package com.WebServiceToolBox;
 
+import org.json.simple.JSONObject;
+
 public class Utils {
 
 	public class Response{
@@ -8,15 +10,16 @@ public class Utils {
 		public String Id;
 		public String Name;
 		public String Status;
+		public JSONObject ob;
 		
 		
 		public Response() {}
 		
-		public String toString() {
-			//return String.format("Code : %d ; Id : %s ; Name : %s ; Staus : %s Body : %s",responseCode,Id, Name, Status,  responseBody);
-			return String.format("Code : %d ;Body : %s",responseCode,responseBody);
-		}
-	}
+		public String toString() {	
+				
+			return String.format("Code : %d ; Body : %s",responseCode, responseBody);
 
-	
+		}
+		
+	}
 }
